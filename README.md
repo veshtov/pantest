@@ -13,7 +13,8 @@ test for pan
 To run script, 
 
 SSH into system (or ansible / other automation)
-sudo wget https://github.com/veshtov/pantest/blob/3f9f868ea57fae822b9d36e905902fdb41d73e79/pantest.sh -P /usr/local/sbin/ | chmod u+x /usr/local/sbin/pantest.sh
+sudo wget https://raw.githubusercontent.com/veshtov/pantest/main/pantest.sh?token=GHSAT0AAAAAABQMEAP3UQJMKCUE3DDGNPTEYPJFYOQ -O pantest.sh | chmod u+x pantest.sh
+sudo mv pentest.sh /usr/local/sbin/ 
 sudo crontab -l > tempcrontab
 sudo echo "0 8-20 * * *" sudo /usr/local/sbin/pantest.sh >/dev/null 2>&1" >> tempcrontab
 sudo crontab tempcrontab
